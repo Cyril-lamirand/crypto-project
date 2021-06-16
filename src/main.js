@@ -12,10 +12,10 @@ Vue.use(IconsPlugin)
 
 // FontAwesome
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faCircle } from "@fortawesome/free-solid-svg-icons/faCircle"
 import router from './router'
-library.add(faUserSecret)
+library.add(faCircle)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
