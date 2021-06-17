@@ -1,6 +1,6 @@
 <template>
   <div class="etherum-component">
-    <div class="d-flex align-items-center">
+    <div class="d-flex align-items-center mt-3">
       <h2>Etherum</h2>
       <div class="pl-3">
         <div v-if="personalInfo.data.status === true">
@@ -72,15 +72,15 @@
         </b-input-group>
       </b-col>
     </b-row>
-    <label class="mt-3">Workers</label>
+    <label class="mt-3">Worker(s)</label>
     <b-row>
       <b-col cols="12" lg="6" v-for="(element, entry) in personalInfo.data.data.workers" v-bind:key="entry">
-        <div class="card">
+        <div class="card shadow">
           <div class="card-body">
             <div class="text-center">
-              <h5 class="card-title">{{ element.id }}</h5>
+              <h5 class="card-title mt-3">{{ element.id }}</h5>
             </div>
-            <b-row>
+            <b-row class="mt-3">
               <b-col cols="12" lg="6">
                 <InputAndLabel
                     :element="element.uid"
@@ -96,7 +96,7 @@
                 />
               </b-col>
             </b-row>
-            <b-row>
+            <b-row class="mt-3">
               <b-col cols="12" lg="6">
                 <InputAndLabel
                     :element="element.lastshare"
@@ -112,7 +112,7 @@
                 />
               </b-col>
             </b-row>
-            <b-row>
+            <b-row class="mt-3">
               <b-col cols="6" lg="4">
                 <InputAndLabel
                     :element="element.h1"
@@ -135,7 +135,7 @@
                 />
               </b-col>
             </b-row>
-            <b-row>
+            <b-row class="mt-3">
               <b-col cols="6" lg="4">
                 <InputAndLabel
                     :element="element.h12"
@@ -163,10 +163,6 @@
         </div>
       </b-col>
     </b-row>
-
-
-
-
   </div>
 </template>
 
