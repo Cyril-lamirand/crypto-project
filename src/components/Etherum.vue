@@ -1,9 +1,5 @@
 <template>
   <div class="etherum-component">
-    <div class="pt-5">
-      {{ personalInfo }}
-    </div>
-    <hr/>
     <div class="d-flex align-items-center">
       <h2>Etherum</h2>
       <div class="pl-3">
@@ -79,25 +75,90 @@
     <label class="mt-3">Workers</label>
     <b-row>
       <b-col cols="12" lg="6" v-for="(element, entry) in personalInfo.data.data.workers" v-bind:key="entry">
-        {{ element }}
-
-
         <div class="card">
           <div class="card-body">
             <div class="text-center">
               <h5 class="card-title">{{ element.id }}</h5>
             </div>
-            <InputAndLabel
-                :element="element.uid"
-                prepend="Uid"
-                :need=2
-            />
-            <InputAndLabel
-                :element="element.hashrate"
-                prepend="Hashrate"
-                :need=2
-            />
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <b-row>
+              <b-col cols="12" lg="6">
+                <InputAndLabel
+                    :element="element.uid"
+                    prepend="Uid"
+                    :need=2
+                />
+              </b-col>
+              <b-col cols="12" lg="6">
+                <InputAndLabel
+                    :element="element.hashrate"
+                    prepend="Hashrate"
+                    :need=2
+                />
+              </b-col>
+            </b-row>
+            <b-row>
+              <b-col cols="12" lg="6">
+                <InputAndLabel
+                    :element="element.lastshare"
+                    prepend="Lastshare"
+                    :need=2
+                />
+              </b-col>
+              <b-col cols="12" lg="6">
+                <InputAndLabel
+                    :element="element.rating"
+                    prepend="Rating"
+                    :need=2
+                />
+              </b-col>
+            </b-row>
+            <b-row>
+              <b-col cols="6" lg="4">
+                <InputAndLabel
+                    :element="element.h1"
+                    prepend="h1"
+                    :need=2
+                />
+              </b-col>
+              <b-col cols="6" lg="4">
+                <InputAndLabel
+                    :element="element.h3"
+                    prepend="h3"
+                    :need=2
+                />
+              </b-col>
+              <b-col cols="6" lg="4">
+                <InputAndLabel
+                    :element="element.h6"
+                    prepend="h6"
+                    :need=2
+                />
+              </b-col>
+            </b-row>
+            <b-row>
+              <b-col cols="6" lg="4">
+                <InputAndLabel
+                    :element="element.h12"
+                    prepend="h12"
+                    :need=2
+                />
+              </b-col>
+              <b-col cols="6" lg="4">
+                <InputAndLabel
+                    :element="element.h24"
+                    prepend="h24"
+                    :need=2
+                />
+              </b-col>
+              <b-col cols="6" lg="4">
+                <InputAndLabel
+                    element="0.0"
+                    prepend="hM"
+                    :need=2
+                />
+              </b-col>
+            </b-row>
+
           </div>
         </div>
       </b-col>
